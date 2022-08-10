@@ -1,0 +1,666 @@
+/* Css starting with navbar  */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fira+Code:wght@300;400&family=Fraunces:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fira+Code:wght@300;400&family=Fraunces:wght@600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* navbar styling from here  */
+nav {
+    font-size: 18px;
+    padding: 24px;
+}
+
+.mynav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li {
+    list-style: none;
+    display: inline;
+}
+
+ul li a {
+    text-decoration: none;
+    margin-left: 40px;
+    color: white;
+    font-family: "Fraunces", serif;
+    transition: all 0.3s;
+}
+
+ul li a:hover {
+    color: rgb(9, 163, 230);
+}
+
+.btn {
+    margin-left: 40px;
+    padding: 16px 32px;
+    border-radius: 30px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    font-family: "Fraunces", serif;
+    transition: all 0.3s;
+}
+.btn:hover {
+    background-color: rgb(9, 163, 230);
+}
+
+
+.heading h1 {
+    font-family: "Fraunces", serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    position: absolute;
+    top: 20%;
+    min-width: 100vw;
+}
+.arrow {
+    position: absolute;
+    left: 48%;
+    transform: translate(18%, 110%);
+}
+.hero {
+    background-image: url(desktop/image-header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+    position: relative;
+    padding: 0;
+}
+
+.mobile-nav-toggle  {
+    display: none;
+}
+
+
+/* navbar styling normal ending is here  */
+
+
+/* for supporting the all the browser a backdrop filer we can use this  */
+/* @supports (backdrop-filter: blur(1rem)) {
+    .mynav {
+        background: hsl(0 0% 100% / 0.3);
+        backdrop-filter: blur(1rem);
+    }
+} */
+
+
+/* responsive navbar styling starting from here  */
+
+@media screen and (max-width: 740px) {
+    .hero {
+        position: relative;
+        min-height: 110vh;
+    }
+
+    .heading h1 {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    .arrow {
+        position: absolute;
+        left: 48%;
+        transform: translate(18%, 150%);
+    }
+
+    .logo-img {
+        padding: 24px;
+    }
+    ul li {
+        display: block;
+        padding: 10px 0px;
+    }
+    ul li a {
+        color: black;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        transition: all 0.3s;
+    }
+    ul li a:hover {
+        color: white;
+    }
+    .nav-res {
+        /* --gap: 2em;  */
+
+        position: fixed;
+        inset: 0 0 0 55%;
+        /* The inset CSS property is a shorthand that corresponds to the top, right, bottom, and/or left properties. 
+        It has the same multi-value syntax of the margin shorthand. */
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;        
+        background-color: hsl(0 0% 0% / 0.3);
+        backdrop-filter: blur(1rem);
+        z-index: 1000;
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+    .btn {
+        padding: 10px 20px;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .primary-navigation[data-visible = "true"] {
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background-image: url("images/menu4.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: transparent;
+        backdrop-filter: blur(1rem);
+        border: none;
+        width: 2rem;
+        aspect-ratio: 1;
+        /* aspect-ration if we use icrease aspect-ratio then the width will
+        automatically increase from left and right with wdith value */
+        top: 2rem;
+        right: 2rem;
+    }
+
+    /* .mobile-nav-toggle[aria-expanded = "true"] {
+        background-image: url("");
+        you can change the humburger icon to cross icon for closing
+    } */
+    
+}
+
+
+@media screen and (max-width: 317px) {
+
+    .heading h1 {
+        font-size: 2rem;
+    }
+}
+
+/* done with the navbar  containing responsivness*/
+
+
+
+/* css of brand one start from this point with responsivness */
+
+.egg-img {
+    display: block;
+    height: 80vh;
+    width: 48.70vw;
+}
+.section-brand{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.egg1 {
+    padding: 0px 64px;
+    background-color: hsl(0, 0%, 100%);
+    height: 80vh;
+    min-width: 50vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.brandHeading h1{
+    color: black;
+    font-size: 28.8px;
+    font-family: "Fraunces", serif;
+    margin-bottom: 25px;
+} 
+
+.brandDesc p {
+    font-weight: 700;
+    color: hsl(210, 25%, 55%);
+    font-size: 19px;
+    margin-bottom: 23px;
+}
+
+.brand-desc a h1 {
+    font-size: 18.72px;
+    font-family: "Fraunces", serif;
+}
+
+.underline {
+    width: 9rem;
+    height: 0.6rem;
+    opacity: 0.3;
+    margin-top: -0.6rem;
+    background: rgb(244, 244, 106);
+    margin-right: auto;
+    margin-left: -4px;
+    border-radius: 1.5rem;
+    transition: all 0.2s linear;
+}
+
+.underline:hover {
+    background-color: rgb(247, 247, 9);
+    opacity: 0.8;
+}
+
+
+@media screen and (max-width: 738px) {
+
+.section-brand {
+    display: flex;
+    flex-direction: column;
+}
+.egg-img {
+    width: 100%;
+    height: auto;
+}
+.underline {
+    margin: 0px 0px;
+    width: 8.5rem;
+}
+
+.egg1 {
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0px 64px;
+}
+.brandHeading h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
+} 
+.brandDesc p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.brand-desc, .underline a h1 {
+    display: flex;
+    justify-content: center;
+}
+}
+
+/* Css of brand-1 ended at this point with responsivness */
+
+
+
+
+/* css of brand-2 started at this point with responsivness */
+
+.egg-img1 {
+    display: block;
+    height: 80vh;
+    width: 50vw;
+}
+.section-brand1{
+    display: flex;
+}
+
+
+.egg2 {
+    background-color: hsl(0, 0%, 100%);
+    flex-direction: column; 
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0px 64px;
+}
+
+.brandHeading1 h1{
+    color: black;
+    font-size: 28.8px;
+    font-family: "Fraunces", serif;
+    margin-bottom: 25px;
+} 
+
+.brandDesc1 p {
+    font-weight: 700;
+    color: hsl(210, 25%, 55%);
+    font-size: 19px;
+    margin-bottom: 23px;
+}
+
+.brand-desc1 a h1 {
+    font-size: 18.72px;
+    font-family: "Fraunces", serif;
+}
+
+.underline1 {
+    width: 9rem;
+    height: 0.6rem;
+    opacity: 0.3;
+    margin-top: -0.6rem;
+    background: rgb(244, 244, 106);
+    margin-right: auto;
+    margin-left: -4px;
+    border-radius: 1.5rem;
+    transition: all 0.2s linear;
+}
+
+.underline1:hover {
+    background-color: rgb(247, 247, 9);
+    opacity: 0.8;
+}
+
+
+@media screen and (max-width: 738px) {
+
+.section-brand1 {
+    display: flex;
+    flex-direction: column;
+}
+.egg-img1 {
+    width: 100%;
+    height: auto;
+}
+.underline1 {
+    margin: 0px 0px;
+    width: 8.5rem;
+}
+
+.egg2 {
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0px 64px;
+    padding: 20px 0px 20px 0px;
+}
+.brandHeading1 h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
+} 
+.brandDesc1 p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.brand-desc1, .underlin1 a h1 {
+    display: flex;
+    justify-content: center;
+}
+}
+
+
+/* ending the css of the brand-two of this page  */
+
+
+
+/* starting the styling of the photography section  */
+
+
+.photos {
+    display: flex;
+    position: relative;
+}
+.apple-img {
+    width: 50vw;
+    height: 65vh;
+    object-fit: cover;
+}
+
+.tangerine-img {
+    width: 50vw;
+    height: 65vh;
+    object-fit: cover;
+}
+
+.photo-heading, .photo-heading1 {
+    color: hsl(167, 40%, 24%);
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 1.2rem;
+    font-family: "Fraunces", serif;
+}
+
+.photo-info, .photo-info1 {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    bottom: 30%;
+    width: 23rem;
+    margin: auto;
+}
+
+.about-photo, .about-photo1{
+    font-weight: 700;
+    text-align: center;
+    font-family: "Barlow", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: hsl(167, 40%, 24%);
+}
+
+ @media screen and (max-width: 738px) { 
+
+    .photos {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .photos img {
+        width: 100%;
+        height: 80vh;
+        display: block;
+    }
+    .photo-info {
+        position: absolute;
+        bottom: 55%;
+        width: 100%;
+    }
+
+    .photo-info1 {
+        position: absolute;
+        bottom: 5%;
+        width: 100%;
+    }
+
+    .about-photo, .about-photo1{
+        font-size: 1rem;
+    }
+
+
+ }
+
+
+
+
+
+/* here we start with testimonials css  */
+
+.client-testimonial {
+    min-height: 70vh;
+}
+.testimonial-title {
+    display: flex;
+    justify-content: center;
+    color: #A7ABAE;
+    font-size: 15px;
+    letter-spacing: 5px;
+}
+
+.testimonials-center {
+    padding: 55x 48px;
+    display: flex;
+}
+.clients {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 80px 0px;
+}
+
+
+.client-img {
+    width: 50px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.client-img1, .client-img2, .client-img3 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.client-info1, .client-info2, .client-info3 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 3rem 3rem;
+    line-height: 1.7rem;
+    color: hsl(213, 9%, 39%);
+}
+
+.client-name1, .client-name2, .client-name3 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.emily, .thomas, .jennie {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.emily-occup, .thomas-occup, .jennie-occup {
+    font-size: 18px;
+    color: hsl(210, 4%, 67%);
+    font-weight: 900;
+}
+
+
+@media screen and (max-width: 738px) {
+
+    .client-testimonial {
+        min-height: 100vh;
+    }
+
+    .testimonials-center {
+        display: block;
+    }
+
+    .client-img {
+        width: 80px;
+    }
+    .testimonial-title {
+        padding-top: 30px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .testimonial-title {
+        text-align: center;
+    }
+}
+
+/* end with the client-testimonials  */
+
+
+
+/* starting with the advetrisment of the photos  */
+
+.advertisment {
+    display: block;
+}
+
+.cone-img, .milkbottle-img, .orange-img, .sugercube-img {
+    width: 100%;
+    height: 100%;
+}
+.display-img {
+    display: flex;
+}
+
+
+/* @media screen and (max-width: 681px) {
+
+} */
+
+
+/* ending with the advertisment of the photos  */
+
+
+
+
+/* starting witht he footer css  */
+
+
+.footer-img {
+    min-height: 50vh;
+    background-color: hsl(168, 52%, 70%);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer-title {
+    font-size: 27px;
+    margin-top: 50px;
+    margin-bottom: 23px;
+    color: hsl(167, 40%, 24%);
+    font-weight: 500;
+    
+}
+
+.footer-info, ul li a {
+    color: hsl(167, 40%, 24%);
+    font-size: 18px;
+}
+.footer-info, ul li a:hover {
+   color: white;
+}
+
+
+.footer-icon {
+    margin-top: 50px;
+}
+
+.footer-icon img {
+    margin: 12px 12px;
+}
+
+
+
+
+.attribution {
+    color: white;
+    display: flex;
+    justify-content: center;
+    background-color: hsl(167, 40%, 24%);
+}
+.attribution a{
+    color: hsl(168, 52%, 70%);
+}
+
